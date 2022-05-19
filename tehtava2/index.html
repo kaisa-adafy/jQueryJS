@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tehtävä 2</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<body>
+
+    <body>
+        <div style="background-color:yellow">
+            <p>Click the button to change the background color of this paragraph.</p> 
+            <button onclick="changeColor()">Click me!</button>
+        </div>
+    </body>
+
+    <script>
+        function changeColor(){
+            $("div").css("background-color", "red");
+        }
+    </script>
+</body>
+
+</html>
