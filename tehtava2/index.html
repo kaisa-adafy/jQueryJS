@@ -9,15 +9,13 @@
 
 <body>
 
-    <body>
-        <div style="background-color:yellow">
-            <p>Click the button to change the background color of this paragraph.</p> 
-            <button onclick="changeColor()">Click me!</button>
-        </div>
-    </body>
+    <div style="background-color:yellow">
+        <p>Click the button to change the background color of this paragraph.</p>
+        <button onclick="changeColor()">Click me!</button>
+    </div>
 
     <script>
-        function changeColor(){
+        function changeColor() {
             $("div").css("background-color", "red");
         }
     </script>
