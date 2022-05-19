@@ -6,17 +6,26 @@
 <button onclick="getRecords()">Hae</button>
 <script>
     function getRecords() {
-        $.getJSON( "https://itunes.apple.com/search?term=drake", function( data ) {
-            var items = [];
-            $.each( data, function( key, val ) {
-                items.push( "<li id='" + key + "'>" + val + "</li>" );
-            });
-            
-            $( "<ul/>", {
-                "class": "my-new-list",
-                html: items.join( "" )
-            }).appendTo( "body" );
-            });
+            $.ajax({
+            url: "https://itunes.apple.com/search?term=drake",
+        
+            // The name of the callback parameter, as specified by the YQL service
+            jsonp: "callback",
+        
+            // Tell jQuery we're expecting JSONP
+            dataType: "jsonp",
+        
+            // Tell YQL what we want and that we want JSON
+            data: {
+                q: "select title,abstract,url from search.news where query=\"cat\"",
+                format: "json"
+            },
+        
+            // Work with the response
+            success: function( response ) {
+                console.log( response ); // server response
+            }
+        });
     }
 </script>
 </body>
