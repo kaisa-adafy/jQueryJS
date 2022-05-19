@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tehtävä 3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<body>
+
+    <p></p>
+    <h2>This is example form</h2>
+    <div> First name: <input type="text" name="first">
+        <br> Last name: <input type="text" name="last">
+    </div>
+
+    <script>
+        $("input").focus(function() {
+            $("h2").replaceWith("<h2>" + this.name + "</h2>");
+        });
+    </script>
+</body>
+
+</html>
